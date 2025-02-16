@@ -1,0 +1,34 @@
+
+  	<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YR734VL3SH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YR734VL3SH');
+    </script>
+            
+            
+      
+      .paypal {
+      		justify-content: center;
+        	align-items: center;
+        	text-align: center;
+        	color: white;
+        	width: 100%;
+      }
+            <br>
+          	<br>
+          	<br>
+          <h1>Donate with Paypal</h1>
+        </section>
+    <section class="paypal">
+        <center><script src="https://www.paypal.com/sdk/js?client-id=BAAZsD72OyEe52pSrJFE05N6pzcZ_b_0iPyHMc5xwma0UVG6n5k9olF4rDDMpZlRURFX19pGCtWnaBmwOQ&components=hosted-buttons&disable-funding=venmo&currency=GBP"></script>
+        <div id="paypal-container-SBQ6AX2QXU95C"></div>
+        <script>
+          paypal.HostedButtons({
+            hostedButtonId: "SBQ6AX2QXU95C",
+          }).render("#paypal-container-SBQ6AX2QXU95C")
+        </script></center>
+      </section>

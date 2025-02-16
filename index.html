@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imamia Mission London UK</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/3bf10b99f3.js" crossorigin="anonymous"></script>
+    <script>
+        function addInputs() {
+            var numInputs = document.getElementById("numInputs").value;
+            var container = document.getElementById("inputContainer");
+
+            // Clear previous inputs
+            container.innerHTML = "";
+
+            // Create new inputs based on user's input
+            for (var i = 0; i < numInputs; i++) {
+                var input = document.createElement("input");
+                input.type = "text";
+                input.name = "family_member" + i;
+                input.id = "family_member" + i;
+                input.placeholder = "Enter the name of your family member";
+                input.required = true;
+                container.appendChild(input);
+                container.appendChild(document.createElement("br")); // Add line break
+            }
+        }
+
+        // document.addEventListener("DOMContentLoaded", function() {
+        //     // Check if the alert has already been shown
+        //     if (!sessionStorage.getItem('alertShown')) {
+        //         // Show the alert
+        //         alert("Assalamualaikum Warahmatullahi Wabarakatuh! We are in need of volunteers to assist us in maintaining the safety of the Jaloos during our 10th Muharram Procession (Jaloos), scheduled for Wednesday 17 July 2024. Please visit https://imamiamission.org/Volunteer-for-the-jaloos.html to express your interest in volunteering. I'll see you at Jaloos!");
+    
+        //         // Set a flag in sessionStorage to indicate the alert has been shown
+        //         sessionStorage.setItem('alertShown', 'true');
+        //     }
+        // });
+        if (window.location.search.includes("submitted=true")) {
+            alert("Thank you for registering for becoming a volunteer. We will be contacting you and adding you to our Jaloos 2024 WhatsApp group. Please keep an eye");
+        }
+    </script>
+</head>
+<body>
+    <section class="nav">
+        <div class="nav-brand">
+            <h1 class="nav-title">Imamia Mission<br>London UK</h1>
+        </div>
+        <div class="nav-menu">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="nav-links">
+                <li class="nav-link active"><a href="./index.html">Home</a></li>
+                <li class="nav-link"><a href="./About.html">About Us</a></li>
+                <li class="nav-link"><a href="./EC.html">Executive Committee</a></li>
+                <li class="nav-link"><a href="./Donate.html">Donate to Us</a></li>
+                <li class="nav-link"><a href="./PT.html">Prayer Times</a></li>
+                <li class="nav-link"><a href="./BE.html">Building Extension</a></li>
+                <li class="nav-link"><a href="./Programmes.html">Programmes</a></li>
+                <li class="nav-link"><a href="#" onclick="document.getElementById('login').style.display='block'" style="width:auto;">Login</a></li>
+                <!-- <li class="nav-link"><a href="#" onclick="document.getElementById('membership').style.display='block'" style="width:auto;">Membership</a></li> -->
+                <li class="nav-link"><a href="#" onclick="document.getElementById('contact').style.display='block'" style="width:auto;">Contact Us</a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="marquee-container">
+        <div class="marquee">
+            <span>Every Thursday 6-8pm Amaal-e-Shabay Jumma | Jumma / Friday Prayers every week at 12 pm</span>
+        </div>
+    </section>
+    <section class="scroll">
+        <section class="modal" id="login">
+            <form class="modal-content animate" action="Login.php" method="POST">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="./Images/img_avatar2.png" alt="Avatar" class="avatar">
+                </div>
+                <div class="container">
+                    <label><b>Name</b></label>
+                    <input type="text" placeholder="Enter Name" name="name" required>
+                    <label><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="u_name" required>
+                    <label><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="pwd_name" required>
+                    <button type="submit">Login</button>
+                </div>
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#" style="color: #258d14;">password?</a></span>
+                </div>
+            </form>
+        </section>
+        <section class="modal" id="contact">
+            <form class="modal-content animate" action="Contact.php" method="POST">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('contact').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+                <div class="container">
+                    <label><b>Name</b></label>
+                    <input type="text" placeholder="Enter your name" name="name" required>
+                    <label><b>Email</b></label>
+                    <input type="email" placeholder="Enter your email address" name="email" required>
+                    <label><b>Phone Number</b></label>
+                    <input type="tel" placeholder="Enter your phone number" name="tel" required>
+                    <label><b>Message</b></label>
+                    <textarea name="message" cols="30" rows="10" placeholder="Enter your message..." required></textarea>
+                    <button type="submit">Login</button>
+                </div>
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('contact').style.display='none'" class="cancelbtn">Cancel</button>
+                </div>
+            </form>
+        </section>
+        <section class="modal" id="membership">
+            <form class="modal-content animate" action="Membership.php" method="POST">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('membership').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="./Images/logo1.png" alt="Avatar" class="avatar1">
+                </div>
+                <div class="container">
+                    <h1 class="membership-title" style="color: #258d14;">Imamia Mission Membership Application Form</h1>
+                    <center><label style="color: red"><b>This form can only be filled by a person who is 18 and above and the people who are the head of their family.</b></label></center>
+                    <br>
+                    <br>
+                    <label><b>Head of Family Name</b></label>
+                    <input type="text" name="head_name" id="head_name" placeholder="Enter your Head of Family Name" required>
+                    <br>
+                    <br>
+                    <label for="numInputs"><b>Number of Family Members</b></label>
+                    <input type="number" id="numInputs" name="numInputs" min="1" onchange="addInputs()" required>
+                    <div id="inputContainer">
+                        
+                    </div>
+                    <br>
+                    <label><b>Date of Birth</b></label>
+                    <input type="date" name="dob" id="dob" placeholder="Enter your Date of Birth" required>
+                    <br>
+                    <br>
+                    <label><b>Address</b></label>
+                    <input type="text" name="address" id="address" placeholder="Enter your address" required>
+                    <br>
+                    <br>
+                    <label><b>Post Code</b></label>
+                    <input type="text" name="postcode" id="postcode" placeholder="Enter your Zip / Post Code" required>
+                    <br>
+                    <br>
+                    <label><b>Telephone Number</b></label>
+                    <input type="tel" name="tele" id="tele" placeholder="Enter your Telephone Number" required>
+                    <br>
+                    <br>
+                    <label><b>Phone Number</b></label>
+                    <input type="tel" name="tel" id="tel" placeholder="Enter your Phone Number" required>
+                    <br>
+                    <br>
+                    <h3>Terms & Conditions</h3>
+                    <p>I wish to apply for the membership of Imamia Mission London (U.K) at a subscription fee of £100.00 per <b><u>person</u></b> per <b><u>annum</u></b>. Renewal date 1st Muharram each year</p>
+                    <p>I am a Muslim of Shia-Isna Ashari faith.</p>
+                    <p>I will abide by the rules as stated in the constitution approved on 19th January 2020 and shall contribute to promote the cause to the best of my ability.</p>
+                    <label class="container">
+                        <input type="checkbox" name="agree_terms" checked="checked" value="1" required> I agree to the Terms & Conditions
+                        <span class="checkmark"></span>
+                    </label>
+                    <button type="submit">Submit</button>
+                </div>
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('membership').style.display='none'" class="cancelbtn">Cancel</button>
+                </div>
+            </form>
+        </section>
+        <!-- <section class="modal" id="register">
+            <form class="modal-content animate" action="#" method="POST">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+                <div class="container">
+                    <label>Please contact 02085549988</label>
+                </div>
+            </form>
+        </section> -->
+        <section class="welcome" id="welcome">
+            <div class="textbox">
+                <div class="text">
+                    <h2>Welcome to Imamia Mission London</h2>
+                    <div class="hr">
+                        <hr>
+                    </div>
+                    <h3>Serving the SHIA Community</h3>
+                    <p>Imamia Mission London is a registered charity that has been serving the SHIA community in Redbridge, London for several decades. We provide a range of religious and community services, including Islamic studies and Quran classes. Join us and be a part of our mission to promote Islamic teachings and unity among the SHIA community.</p>
+                    <br>
+                    <a href="./About.html" class="button">Learn More</a>
+                </div>
+            </div>
+            <div class="textbox" id="right">
+                <div class="text">
+                    <h2>About Us</h2>
+                    <div class="hr">
+                        <hr>
+                    </div>
+                    <h3>Our Mission and Vision</h3>
+                    <p>At Imamia Mission London, our mission is to provide a place of worship and spiritual guidance for the SHIA community in Redbridge. We strive to promote Islamic teachings and values, while fostering a sense of unity, peace, and respect among our community members. Through our various programs and services, we aim to strengthen the faith of our members and contribute to their personal growth.</p>
+                    <br>
+                    <a href="#" onclick="document.getElementById('membership').style.display='block'" class="button">Become a Member</a>
+                </div>
+            </div>
+        </section>
+        <section class="services1">
+            <div class="cards1">
+                <div class="card1">
+                    <h3>Over 40</h3>
+                    <span>Years of Service</span>
+                </div>
+                <div class="card1">
+                    <h3>Since the late 1970's</h3>
+                    <span>Registered Charity</span>
+                </div>
+                <div class="card1">
+                    <h3>Growing Every Day</h3>
+                    <span>Community Members</span>
+                </div>
+            </div>
+        </section>
+        <section class="services">
+            <h2>Our Services</h2>
+            <br>
+            <div class="cards">
+                <div class="card">
+                    <img src="./Images/quran.jpeg" alt="Service 1">
+                    <h3>Quran Classes</h3>
+                    <p>Our Quran classes are designed to help individuals of all ages learn how to recite and understand the Quran. We have qualified Quran teachers who provide personalised guidance and support to ensure effective learning. Quran classes happen on <b>Mondays and Wednesdays</b>.</p>
+                    <br>
+                    <center><a href="#" onclick="document.getElementById('register').style.display='block'" style="width:auto;" class="button">Register</a></center>
+                    <br>
+                </div>
+                <div class="card">
+                    <img src="./Images/islamicstudies.jpeg" alt="Service 2">
+                    <h3>Islamic Studies</h3>
+                    <p>We offer comprehensive Islamic studies courses for children. Our experienced teachers provide Quranic education, Hadith studies, Akhlaq and Islamic history lessons to help individuals deepen their understanding of Islam.</p>
+                    <br style="margin-top: 100px;">
+                    <center><a href="#" onclick="document.getElementById('register').style.display='block'" style="width:auto;" class="button">Register</a></center>
+                </div>
+                <div class="card">
+                    <img src="./Images/charity.png" alt="Service 3">
+                    <h3>Charitable Initiatives</h3>
+                    <p>As a registered charity, Imamia Mission London actively engages in charitable initiatives to support those in need. We run projects aimed at providing food, clothing, healthcare, and education to underprivileged individuals and families.</p>
+                    <br>
+                    <center><a href="./Donate.html" class="button">Donate Now</a></center>
+                </div>
+            </div>
+        </section>
+        <section class="footer">
+            <div class="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <center><h1>Contact Us</h1></center>
+                            <form action="Contact.php" method="POST">
+                                <label class="form-label">Name*</label>
+                                <br>
+                                <input type="text" name="name" id="name" class="form-input" placeholder="Your Full Name" required>
+                                <br>
+                                <br>
+                                <label class="form-label">Email*</label>
+                                <br>
+                                <input type="email" name="email" id="email" class="form-input" placeholder="Your Email ID" required>
+                                <br>
+                                <br>
+                                <label class="form-label">Phone Number*</label>
+                                <br>
+                                <input type="tel" name="phone_no" id="phone_no" class="form-input" placeholder="Your Phone Number" required>
+                                <br>
+                                <br>
+                                <label class="form-label">Message*</label>
+                                <br>
+                                <textarea name="message" id="message" cols="30" rows="10" class="form-textarea" placeholder="Enter Your Message..." required></textarea>
+                                <br>
+                                <br>
+                                <label>* indicates required field</label>
+                                <br>
+                                <br>
+                                <button type="submit" class="form-submit">Submit</button>
+                            </form>
+                        </div>
+                        <div class="col-p">
+                            <p>Telephone Number: <a href="tel:02085549988">02085549988</a></p>
+                            <p>Email: <a href="malito:imamiamissionuk@gmail.com">imamiamissionuk@gmail.com</a></p>
+                            <p>Address: <a href="https://maps.app.goo.gl/tmdChxZ31AkHXc6h7">129 Perrymans Farm Road, Newbury Park, Ilford, IG2 7LX, Essex</a></p>
+                            <div class="media-container">
+                                <a href="https://www.facebook.com/imamiamissionlondon"><i class="fa-brands fa-square-facebook fa-2xl" style="color: #ffffff;"></i></a>
+                                <a href="malito:imamiamissionuk@gmail.com"><i class="fa-solid fa-square-envelope fa-2xl" style="color: #ffffff;"></i></a>
+                                <a href="tel:02085549988"><i class="fa-solid fa-square-phone fa-2xl" style="color: #ffffff;"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9917.847904701059!2d0.08031663848266264!3d51.578096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a7bdaaaaaaab%3A0xf3dcafac772fcd4f!2sImamia%20Mission%20London%20UK!5e0!3m2!1sen!2suk!4v1717864422301!5m2!1sen!2suk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="copyright">
+                <label>© All Rights Reserved</label>
+            </div>
+            <!-- <ul class="menu">
+                <li class="nav-linka"><a href="./index.html">Home</a></li>
+                <li class="nav-link"><a href="./About.html">About Us</a></li>
+                <li class="nav-link"><a href="#" onclick="document.getElementById('contact').style.display='block'" style="width:auto;">Contact Us</a></li>
+                <li id="mainBtn">&hellip;
+                    <ul class="sub-menu">
+                        <li class="nav-link"><a href="./EC.html">Executive Committee</a></li>
+                        <li class="nav-link"><a href="./Donate.html">Donate to Us</a></li>
+                        <li class="nav-link"><a href="./PT.php">Prayer Times</a></li>
+                        <li class="nav-link"><a href="./BE.html">Building Extension</a></li>
+                        <li class="nav-link"><a href="./Programmes.html">Programmes</a></li>
+                        <li class="nav-link"><a href="#" onclick="document.getElementById('login').style.display='block'" style="width:auto;">Login</a></li>
+                        <li class="nav-link"><a href="#" onclick="document.getElementById('contact').style.display='block'" style="width:auto;">Contact Us</a></li>
+                    </ul>
+                </li>
+            </ul> -->
+            <div class="media-container">
+                <a href="https://www.facebook.com/imamiamissionlondon"><i class="fa-brands fa-square-facebook fa-2xl" style="color: #ffffff;"></i></a>
+                <a href="https://mail.google.com"><i class="fa-solid fa-square-envelope fa-2xl" style="color: #ffffff;"></i></a>
+                <a href="tel:02085549988"><i class="fa-solid fa-square-phone fa-2xl" style="color: #ffffff;"></i></a>
+            </div>
+        </section>
+    </section>
+    <script src="script.js"></script>
+  	<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://www.imamiamission.org",
+      "logo": "https://www.imamiamission.org/Images/Logo.png"
+    }
+    </script>
+
+</body>
+</html>
